@@ -13,12 +13,5 @@ export class AppComponent {
 
   }
 
-  ngOnInit() {
-    this.bigchainService.createTransaction({
-      abc: 'def'
-    }).subscribe((res: any) => {
-      console.log(res);
-    })
-  }
-
+  ngOnInit() {}
 }

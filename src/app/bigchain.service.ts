@@ -5,11 +5,16 @@ import {Http} from "@angular/http";
 export class BigchainService {
   private apiPath: string = '/bigchain/api/v1/';
 
+  private static senderPublicKey = 'DePKLLGt7qQ3J8kbTNow2psobziipEq8bqA4SnCm3V8K';
+  private static senderPrivateKey = 'AgBBQZsZvwDfV6Em9imheF4C6JdUYi7waViEznrhUXen';
+
   constructor(private http: Http) { }
 
-  createTransaction(transaction: any) {
-    return this.http.post(this.apiPath + 'create_transaction', JSON.stringify(transaction))
+  postTransferTransaction(transferTransaction: any) {
+    return this.http.post(this.apiPath + 'transactions', JSON.stringify(transferTransaction))
       .map(res => res.json());
   }
 
+  fetchCreateTransactions() {
+  }
 }
