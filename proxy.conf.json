@@ -1,0 +1,9 @@
+{
+  "/bigchain/": {
+    "target": "http://localhost:9984/",
+    "secure": false,
+    "pathRewrite": {
+      "^/bigchain/": ""
+    }
+  }
+}

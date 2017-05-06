@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {BigchainService} from "./bigchain.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+
+  constructor(private bigchainService: BigchainService) {
+
+  }
+
+  ngOnInit() {
+    this.bigchainService.createTransaction({
+      abc: 'def'
+    }).subscribe((res: any) => {
+      console.log(res);
+    })
+  }
+
 }
