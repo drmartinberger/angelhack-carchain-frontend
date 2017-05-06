@@ -13,5 +13,7 @@ export class AppComponent {
 
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.bigchainService.fetchCreateTransactions();
+  }
 }

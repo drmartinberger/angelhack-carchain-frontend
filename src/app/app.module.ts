@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
+import {BigchainService} from "./bigchain.service";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import 'rxjs/add/operator/map';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    BigchainService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
