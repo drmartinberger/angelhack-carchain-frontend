@@ -17,3 +17,38 @@
     top:320px;
     left:865px;
 }
+
+.all-offers2 {
+    position:relative;
+    height:205px;
+    width: 305px;
+    top:329px;
+    left:680px;
+}
+
+
+.allianz {
+    background-image: url('/assets/allianz.png');
+}
+
+.shell {
+    position:relative;
+    height:202px;
+    width: 309px;
+    top:126px;
+    left:40px;
+    background-image: url('/assets/shell.png');
+}
+
+.aldi {
+    position:relative;
+    height:201px;
+    width: 312px;
+    left:353px;
+    top:-76px;
+
+    background-image: url('/assets/aldi.png');
+}
+
+
+

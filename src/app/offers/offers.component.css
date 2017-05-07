@@ -1,0 +1,8 @@
+.offers-click {
+    position: relative;
+    width: 320px;
+    height: 210px;
+    top: 190px;
+    left: 30px;
+    cursor: pointer;
+}

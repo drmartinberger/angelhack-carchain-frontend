@@ -1,4 +1,8 @@
 <div class="container page-dashboard">
     <div class="location-services" (click)="switchLoc()" [class.location-services-bg]="show"></div>
-    <div class="all-offers"></div>
+    <div class="all-offers" [routerLink]="['/offers']"></div>
+    <div class="all-offers2" [class.allianz]="allianz" [routerLink]="['/offers']"></div>
+
+    <div [class.shell]="shell"></div>
+    <div [class.aldi]="aldi"></div>
 </div>
