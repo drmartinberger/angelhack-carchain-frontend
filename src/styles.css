@@ -20,3 +20,11 @@ body {
 .page-dashboard {
   background-image: url('/assets/dashboard.png');
 }
+
+.page-offers {
+  background-image: url('/assets/offers marketplace.png');
+}
+
+.page-offer-detail {
+  background-image: url('/assets/offer detail.png');
+}
