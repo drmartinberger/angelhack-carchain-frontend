@@ -1,0 +1,19 @@
+.location-services {
+    position:relative;
+    height:117px;
+    width: 175px;
+    top:250px;
+    left: 49px;
+}
+
+.location-services-bg {
+    background-image: url('/assets/dashboard location inactive.png');
+}
+
+.all-offers {
+    position:relative;
+    height:40px;
+    width: 120px;
+    top:320px;
+    left:865px;
+}

@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  public show: number;
 
+  constructor() {
+ 
+  }
+    
   ngOnInit() {
   }
+  
+  switchLoc() {
+      console.log('switch');
 
+      if(this.show) {
+        this.show = 0
+      } else {
+        this.show = 1
+      }
+  }
 }
