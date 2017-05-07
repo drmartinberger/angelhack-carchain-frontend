@@ -11,10 +11,10 @@ export class FrontendComponent implements OnInit {
   constructor(private bigchainService: BigchainService) { }
 
   ngOnInit() {
-    this.bigchainService.fetchTransactions()
+    /*this.bigchainService.fetchTransactions()
       .subscribe((transactionIds: string[]) => {
         console.log(transactionIds);
-      });
+      });*/
   }
 
 }

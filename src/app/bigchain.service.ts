@@ -22,8 +22,13 @@ export class BigchainService {
       .map(res => res.json());
   }
 
-  fetchTransactions() {
-    return this.http.get(this.apiPath + 'outputs?public_key=' + BigchainService.senderPublicKey + '&unspent=true')
+  fetchTransactionIds(keyType: string = 'sender') {
+     let key = BigchainService.senderPublicKey;
+     if (keyType === 'recipient') {
+       key = BigchainService.recipientPublicKey;
+     }
+
+    return this.http.get(this.apiPath + 'outputs?public_key=' + key + '&unspent=true')
       .map((res => res.json()))
       .map((transactions: any) => {
         let res = [];
@@ -33,6 +38,11 @@ export class BigchainService {
         })
         return res;
       })
+  }
+
+  getTransaction(transactionId: string) {
+    return this.http.get(this.apiPath + 'transactions/' + transactionId)
+      .map((res => res.json()));
   }
 
   fetchCreateTransactions(type: string = null) {
@@ -48,13 +58,15 @@ export class BigchainService {
               let headers = new Headers({ 'Content-Type': 'application/json' });
               let options = new RequestOptions({ headers: headers });
 
+              //console.log(res);
+
               this.http.post(this.apiPathGen + 'transfer', JSON.stringify({
                 tx: res,
                 publicKey: BigchainService.recipientPublicKey,
               }), options)
                 .map(res => res.json())
                 .subscribe((res) => {
-                  console.log(res);
+                  //console.log(res);
                 })
             })
         })
