@@ -45,6 +45,11 @@ export class BigchainService {
       .map((res => res.json()));
   }
 
+  startGenerator() {
+    return this.http.post(this.apiPathGen + 'start', null)
+      .subscribe(() => {})
+  }
+
   fetchCreateTransactions(type: string = null) {
     this.http.get(this.apiPath + 'outputs?public_key=' + BigchainService.senderPublicKey + '&unspent=true')
       .map((res => res.json()))
