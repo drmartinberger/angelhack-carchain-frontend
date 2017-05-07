@@ -9,15 +9,21 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import {BigchainService} from "./bigchain.service";
+import {AppRoutingModule} from "./app-routing.module";
+import { ThirdPartyComponent } from './third-party/third-party.component';
+import { FrontendComponent } from './frontend/frontend.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ThirdPartyComponent,
+    FrontendComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule,
   ],
   providers: [
     BigchainService,

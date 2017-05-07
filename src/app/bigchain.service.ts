@@ -22,6 +22,19 @@ export class BigchainService {
       .map(res => res.json());
   }
 
+  fetchTransactions() {
+    return this.http.get(this.apiPath + 'outputs?public_key=' + BigchainService.senderPublicKey + '&unspent=true')
+      .map((res => res.json()))
+      .map((transactions: any) => {
+        let res = [];
+        transactions.forEach((transaction: any) => {
+          let id = transaction.split("/")[2];
+          res.push(id);
+        })
+        return res;
+      })
+  }
+
   fetchCreateTransactions(type: string = null) {
     this.http.get(this.apiPath + 'outputs?public_key=' + BigchainService.senderPublicKey + '&unspent=true')
       .map((res => res.json()))
