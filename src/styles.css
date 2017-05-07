@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  border: 1px solid black;
+  margin: auto;
+  width: 1024px;
+  height: 768px;
+}
+
+.page-login {
+  background-image: url('/assets/login.png');
+  cursor: pointer;
+}
+
+.page-dashboard {
+  background-image: url('/assets/dashboard.png');
+}

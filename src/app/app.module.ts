@@ -12,12 +12,14 @@ import {BigchainService} from "./bigchain.service";
 import {AppRoutingModule} from "./app-routing.module";
 import { ThirdPartyComponent } from './third-party/third-party.component';
 import { FrontendComponent } from './frontend/frontend.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ThirdPartyComponent,
-    FrontendComponent
+    FrontendComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
