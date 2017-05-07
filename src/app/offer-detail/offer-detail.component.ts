@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router'
+import {BigchainService} from "../bigchain.service";
 
 @Component({
   selector: 'app-offer-detail',
@@ -8,14 +9,16 @@ import {Router} from '@angular/router'
 })
 export class OfferDetailComponent implements OnInit {
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private bigchainService: BigchainService) {
       this.router = router;
   }
 
   ngOnInit() {
   }
-  
+
   enroll() {
+    this.bigchainService.startGenerator();
+    
     this.router.navigate(['/dashboard']);
     sessionStorage.setItem('allianz', '1');
   }

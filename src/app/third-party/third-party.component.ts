@@ -11,6 +11,7 @@ export class ThirdPartyComponent implements OnInit {
   @ViewChild('gmap') gmap: GmapComponent;
 
   existingTransactionIds: string[] = null;
+  last: any;
 
   constructor(private bigchainService: BigchainService) {
   }
@@ -31,6 +32,7 @@ export class ThirdPartyComponent implements OnInit {
                     .subscribe((transaction: any) => {
                       let data = transaction.asset.data;
                       this.gmap.addMarker(data.lat, data.lon);
+                      this.last = transaction;
                     })
                 })
             }
